@@ -66,13 +66,14 @@ namespace common {
 			return ((int64_t)rawValue << N) / p.rawValue;
 		}
 
+		// 整数平方根算法
 		FP32 sqrt() {
 			unsigned long temp = 0;
 			unsigned v_bit = 15;
 			unsigned n = 0;
 			unsigned b = 0x8000;
 
-			uint32_t x = rawValue << N;
+			uint32_t x = (uint32_t)rawValue << N;
 			if (x <= 1)
 				return x;
 

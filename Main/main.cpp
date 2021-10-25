@@ -8,8 +8,8 @@ using namespace std;
 int main() {
 	cout << "test main begin" << endl;
 
-	common::FP32 v(0);
-	auto r = v + 10;
-	cout << r.raw() << endl;
+	common::FP64 v(0);
+	auto r = v + 100000;
+	cout << r.sqrt().toNumber() << endl;
 	return 0;
 }
